@@ -630,36 +630,48 @@
                     </div>
                 </div>
 
-                <form action="" class="contact__form grid">
+                <form action="" class="contact__form grid" id="contactForm">
                     <div class="contact__inputs grid">
                         <div class="contact__content">
                             <label for="" class="contact__label">Name</label>
-                            <input type="text" class="contact__input">
+                            <input type="text" class="contact__input"   name="Name">
                         </div>
 
                         <div class="contact__content">
                             <label for="" class="contact__label">E-mail</label>
-                            <input type="email" class="contact__input">
+                            <input type="email" class="contact__input" name="Email">
                         </div>
                     </div>
 
                     <div class="contact__content">
                         <label for="" class="contact__label">Subject</label>
-                        <input type="text" class="contact__input">
+                        <input type="text" class="contact__input" name="Subject">
                     </div>
 
                     <div class="contact__content">
                         <label for="" class="contact__label">Description</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                        <textarea  id="" cols="0" rows="7" class="contact__input" name="Description"></textarea>
                     </div>
 
                     <div>
-                        <a href="#" class="button button--flex">
-                            Send message
-                            <i class="uil uil-message button__icon"></i>
-                        </a>
+                        <input type="submit" class="button button--flex" value="Send message">
                     </div>
                 </form>
+                <script>
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbxJqjp7HG3f6Z1jG81UgAO0oNsOtgn_NG8EvJf-YDVi4Mv8j3SuKOQP5vKnEVe4BZFb/exec'
+                    const form = document.forms['contactForm']
+                    
+                    form.addEventListener('submit', e => {
+                      e.preventDefault()
+                      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                      .then(response => {
+                        
+                        alert("Thank you! your form is submitted successfully.");
+                        window.location.href = 'index.html';})
+                      
+                      .catch(error => console.error('Error!', error.message))
+                    })
+                    </script>
             </div>
 
         </section>
