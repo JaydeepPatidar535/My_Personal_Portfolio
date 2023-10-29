@@ -855,66 +855,42 @@ img {
 
 
 /*==================== CONTACT ME ====================*/
-/* Contact Form Container */
-.contact-form-container {
-  background-color: var(--input-color);
-  border-radius: 0.5rem;
-  padding: 2rem;
-  width: 450px;
-  
-  margin: 0 auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Contact Container */
 .contact__container {
   row-gap: 3rem;
 }
 
-/* Contact Information */
 .contact__information {
   display: flex;
-  margin-bottom:0px;
+  margin-bottom: var(--mb-2);
 }
 
-/* Contact Icon */
 .contact__icon {
   font-size: 1.5rem;
   color: var(--first-color);
   margin-right: var(--mb-0-75);
 }
 
-/* Content Title */
 .content__title {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
-  margin-bottom: 6px;
-  font-weight: bold;
-  
 }
 
-/* Contact Form Subtitle */
 .contact__subtitle {
   font-size: var(--small-font-size);
   color: var(--text-color-light);
-  color: #fff;
 }
 
-/* Contact Content */
 .contact__content {
   background-color: var(--input-color);
   border-radius: 0.5rem;
   padding: 0.75rem 1rem 0.25rem;
-  color: #fff;
 }
 
-/* Contact Label */
 .contact__label {
   font-size: var(--smaller-font-size);
   color: var(--title-color);
 }
 
-/* Contact Input */
 .contact__input {
   width: 100%;
   background-color: var(--input-color);
@@ -925,35 +901,6 @@ img {
   outline: none;
   padding: 0.25rem 0.5rem 0.5rem 0;
 }
-
-/* Form Inputs */
-.form-control,
-.form-text-area {
-  color: #fff;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 0; /* Remove the margin between input fields */
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: var(--input-color);
-}
-
-/* Submit Button */
-input[type="submit"] {
-  background-color: var(--first-color);
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-input[type="submit"]:hover {
-  background-color: var(--first-color);
-}
-
-
 
 /*==================== FOOTER ====================*/
 .footer {
