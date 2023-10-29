@@ -39,7 +39,7 @@
                             <i class="uil uil-file-alt nav__icon"></i>Skills
                         </a>
                     </li>
-                    
+
                     <li class="nav__item">
                         <a href="#portfolio" class="nav__link">
                             <i class="uil uil-scenery nav__icon"></i>Portfolio
@@ -607,7 +607,7 @@
 
                         <div>
                             <h3 class="contact__title">Call me</h3>
-                            <span class="contatc__subtitle">(+91) 9644190657</span>
+                            <span class="contatc__subtitle">(+91) 9644190657</span><br><br><br>
                         </div>
                     </div>
 
@@ -616,7 +616,7 @@
 
                         <div>
                             <h3 class="contact__title">E-mail</h3>
-                            <span class="contatc__subtitle">jaydeeppatidar535@gmail.com</span>
+                            <span class="contatc__subtitle">jaydeeppatidar535@gmail.com</span><br><br><br>
                         </div>
                     </div>
 
@@ -625,41 +625,67 @@
 
                         <div>
                             <h3 class="contact__title">Location</h3>
-                            <span class="contatc__subtitle">Jhabua, Madhya Pradesh</span>
+                            <span class="contatc__subtitle">Jhabua, Madhya Pradesh</span><br><br><br>
                         </div>
                     </div>
                 </div>
 
-                <form action="" class="contact__form grid">
-                    <div class="contact__inputs grid">
-                        <div class="contact__content">
-                            <label for="" class="contact__label">Name</label>
-                            <input type="text" class="contact__input">
+                <div class="contact-form-container">
+                    <form action="#" class="contact-form" id="contactForm">
+
+                        <div class="contact__container">
+                            <div class="contact__information">
+                                <i class="contact__icon"></i>
+                                <h6 class="content__title">Name</h6>
+                            </div>
+                            <input type="text" class="form-control rounded border-white mb-3 form-input" name="Name"
+                                id="name" required><br><br>
                         </div>
-
-                        <div class="contact__content">
-                            <label for="" class="contact__label">E-mail</label>
-                            <input type="email" class="contact__input">
+                        <div class="contact__information">
+                            <i class="contact__icon"></i>
+                            <h6 class="content__title">Email</h6>
                         </div>
-                    </div>
+                        <input type="email" class="form-control rounded border-white mb-3 form-input" name="Email"
+                            id="email" required><br><br>
+                        <div class="contact__information">
+                            <i class="contact__icon"></i>
+                            <h6 class="content__title">Phone Number</h6>
+                        </div>
+                        <input type="text" class="form-control rounded border-white mb-3 form-input" name="Number"
+                            id="number" required><br><br>
+                        <div class="contact__information">
+                            <i class="contact__icon"></i>
+                            <h6 class="content__title">Message</h6>
+                        </div>
+                        <textarea id="message" class="form-control rounded border-white mb-3 form-text-area" rows="5"
+                            cols="30" name="Message" id="message" required></textarea><br><br>
+                        <div class="submit-button-wrapper">
+                            <input type="submit" value="Send">
+                        </div>
+                    </form>
+                    <script>
+                        const scriptURL =
+                            'https://script.google.com/macros/s/AKfycbxJqjp7HG3f6Z1jG81UgAO0oNsOtgn_NG8EvJf-YDVi4Mv8j3SuKOQP5vKnEVe4BZFb/exec'
+                        const form = document.forms['contactForm']
 
-                    <div class="contact__content">
-                        <label for="" class="contact__label">Subject</label>
-                        <input type="text" class="contact__input">
-                    </div>
+                        form.addEventListener('submit', e => {
+                            e.preventDefault();
+                            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                                .then(response => {
+                                    if (response.ok) {
+                                        alert("Thank you! Your form is submitted successfully.");
+                                        window.location.href = 'index.html'; // Redirect to the home page
+                                    } else {
+                                        throw new Error('Network response was not ok.');
+                                    }
+                                })
+                                .catch(error => console.error('Error!', error.message));
+                        });
+                    </script>
 
-                    <div class="contact__content">
-                        <label for="" class="contact__label">Description</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
-                    </div>
+                </div>
 
-                    <div>
-                        <a href="#" class="button button--flex">
-                            Send message
-                            <i class="uil uil-message button__icon"></i>
-                        </a>
-                    </div>
-                </form>
+
             </div>
 
         </section>
@@ -676,7 +702,7 @@
                 </div>
 
                 <ul class="footer__links">
-                    
+
                     <li>
                         <a href="#portfolio" class="footer__link">Portfolio</a>
                     </li>
