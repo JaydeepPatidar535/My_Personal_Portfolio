@@ -139,7 +139,7 @@
                     </p>
 
                     <div class="about__buttons">
-                        <a  href="images/Jaydeep.pdf" class="button button--flex" target="_blank">
+                        <a href="images/Jaydeep.pdf" class="button button--flex" target="_blank">
                             Download Resume/CV<i class="uil uil-download-alt button__icon"></i>
                         </a>
                     </div>
@@ -511,8 +511,30 @@
                             </a>
                         </div>
                     </div>
-
                     <!--==================== PORTFOLIO 2 ====================-->
+
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="./images/Learnovation.png" alt="" class="portfolio__img">
+
+                        <div class="portfolio_">
+                            <h3 class="portfolio__title">Learning Management System</h3>
+                            <p class="portfolio__description">
+                                I created a user-friendly Learning Management System (LMS) using the MERN stack,
+                                streamlining online education. The platform empowers students to easily navigate and
+                                engage with a variety of educational content, including materials from YouTube</p>
+                            <a href="https://learnovation.netlify.app/"
+                                class="button button--flex button--small portfolio__button">
+                                Live Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                            <a href="https://github.com/JaydeepPatidar535/Learnovation"
+                                class="button button--flex button--small portfolio__button">
+                                Source Code
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--==================== PORTFOLIO 3 ====================-->
 
                     <div class="portfolio__content grid swiper-slide">
                         <img src="./images/Home-Campus-Finder.png" alt="" class="portfolio__img">
@@ -534,7 +556,7 @@
                             </a>
                         </div>
                     </div>
-                    <!--==================== PORTFOLIO 3 ====================-->
+                    <!--==================== PORTFOLIO 4 ====================-->
 
                     <div class="portfolio__content grid swiper-slide">
                         <img src="./images/Welcome-PG-Life.png" alt="" class="portfolio__img">
@@ -635,7 +657,7 @@
                     <div class="contact__inputs grid">
                         <div class="contact__content">
                             <label for="" class="contact__label">Name</label>
-                            <input type="text" class="contact__input"   name="Name">
+                            <input type="text" class="contact__input" name="Name">
                         </div>
 
                         <div class="contact__content">
@@ -651,7 +673,7 @@
 
                     <div class="contact__content">
                         <label for="" class="contact__label">Description</label>
-                        <textarea  id="" cols="0" rows="7" class="contact__input" name="Description"></textarea>
+                        <textarea id="" cols="0" rows="7" class="contact__input" name="Description"></textarea>
                     </div>
 
                     <div>
@@ -661,18 +683,19 @@
                 <script>
                     const scriptURL = 'https://script.google.com/macros/s/AKfycbxJqjp7HG3f6Z1jG81UgAO0oNsOtgn_NG8EvJf-YDVi4Mv8j3SuKOQP5vKnEVe4BZFb/exec'
                     const form = document.forms['contactForm']
-                    
+
                     form.addEventListener('submit', e => {
-                      e.preventDefault()
-                      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                      .then(response => {
-                        
-                        alert("Thank you! your form is submitted successfully.");
-                        window.location.href = 'index.html';})
-                      
-                      .catch(error => console.error('Error!', error.message))
+                        e.preventDefault()
+                        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                            .then(response => {
+
+                                alert("Thank you! your form is submitted successfully.");
+                                window.location.href = 'index.html';
+                            })
+
+                            .catch(error => console.error('Error!', error.message))
                     })
-                    </script>
+                </script>
             </div>
 
         </section>
